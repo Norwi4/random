@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Пример макета</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=.0" />
+   <style>
+      body {
+         margin: 0;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+      }
+
+      header {
+         background: #eee;
+         padding: 20px;
+      }
+
+      main {
+         flex: 1;
+         padding: 20px;
+      }
+
+      footer {
+         background: #ddd;
+         padding: 20px;
+      }
+
+      .container {
+         max-width: 1000px;
+         width: 100%;
+         margin: 0 auto;
+      }
+	  .max400 {
+			  display:none
+		  }
+
+	  @media only screen and (max-width: 400px) {
+		  .min400 {
+			  display:none;
+		  }
+		  .max400 {
+			  display:block;
+			  color:red;
+			  font-size:20px
+		  }
+	  }
+
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <h1>Генератор кодов</h1>
+      </div>
+   </header>
+   <main>
+      <div class="container">
+	   <div class="min400">
+         <p>Сообщение: {{ code }}</p>
+	   </div>
+	   <div class="max400">
+         <p>Сообщение: {{ code }}</p>
+	  </div>
+      </div>
+   </main>
+   <footer>
+      <div class="container">
+         Подвал сайта
+      </div>
+   </footer>
+</body>
+
+</html>
+
